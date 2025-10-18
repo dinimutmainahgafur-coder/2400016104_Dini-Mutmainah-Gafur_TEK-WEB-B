@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Data Profil </title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html,body { height: 100%; }
+
+    body{
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #f3f4f6;
+      color: #222;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding: 40px 16px;
+    }
+
+    .page{
+      max-width: 760px;
+      margin: 0 auto;
+      position: relative;
+      padding-top: 80px; /* space for avatar overlap */
+    }
+
+    .avatar-wrap{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      width: 110px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 20;
+    }
+
+    .avatar{
+      width: 120px;
+      height: 110px;
+      display: block;
+      border-radius: 50%;
+      background: transparent;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+
+    .content{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.96), #ffffff);
+      border-radius: 8px;
+      padding: 22px;
+      box-shadow: 0 6px 20px rgba(19,22,28,0.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:first-of-type{
+      margin-top: 40px;
+    }
+
+    .card-title{
+      color: #257fec;
+      font-weight: 700;
+      font-size: 22px;
+      margin-bottom: 10px;
+      letter-spacing: -0.2px;
+    }
+
+    .card-text{
+      color: #333;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .small{
+      font-size: 13px;
+      color: #3a3a3a;
+    }
+
+    .projects{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .project-item{
+      background: rgba(240,242,245,0.8);
+      padding: 12px 14px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+      align-items: flex-start;
+    }
+
+    .project-item::before{
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      bottom: 12px;
+      width: 4px;
+      background: #257fec;
+      border-radius: 2px;
+    }
+
+    .project-item .project-title,
+    .project-item .project-desc{
+      margin-left: 22px;
+      font-size: 14px;
+    }
+
+    .project-title{
+      color: #257fec;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 520px){
+      .page{ padding-top: 100px; }
+      .avatar{ width: 96px; height: 96px; }
+      .avatar-wrap{ width: 96px; height: 96px; top: -16px; }
+      .card-title{ font-size: 18px; }
+      .card{ padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="avatar-wrap">
+      
+      <svg class="avatar" viewBox="0 0 120 120" aria-hidden="true">
+        <defs>
+          <linearGradient id="g" x1="0" x2="1">
+            <stop offset="0" stop-color="#2e8cf0" />
+            <stop offset="1" stop-color="#1c6fc6" />
+          </linearGradient>
+        </defs>
+        <circle cx="60" cy="60" r="58" fill="white" stroke="url(#g)" stroke-width="5"/>
+        <g transform="translate(24,22)">
+          <ellipse cx="36" cy="36" rx="23" ry="26" fill="#f5d6c6"/>
+          <path d="M14 28c6-18 46-18 52 2v12c-12-14-44-18-52-2z" fill="#2b2b2b"/>
+          <rect x="6" y="58" width="60" height="26" rx="12" fill="#6b3d3f"/>
+          <path d="M20 38c6 12 32 12 42 0v6c-10 8-32 8-42 0z" fill="#3a2b2b"/>
+        </g>
+      </svg>
+    </div>
+
+    <section class="content">
+      <article class="card">
+        <h2 class="card-title">About Me</h2>
+        <p class="card-text">
+          A passionate individual with a love for Music. Skilled in Backend Developments.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2 class="card-title">Projects</h2>
+        <div class="projects">
+          <div class="project-item">
+            <a href="#" class="project-title">Project 1 Title</a>
+            <span class="project-desc"> - Brief description of Project 1.</span>
+          </div>
+          <div class="project-item">
+            <a href="#" class="project-title">Project 2 Title</a>
+            <span class="project-desc"> - Brief description of Project 2.</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2 class="card-title">Contact</h2>
+        <p class="card-text small">
+          Email: <a href="mailto:budionosiregar@kapallawd.com">budionosiregar@kapallawd.com</a><br/>
+          LinkedIn: <a href="#">Budiono Siregar</a>
+        </p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
