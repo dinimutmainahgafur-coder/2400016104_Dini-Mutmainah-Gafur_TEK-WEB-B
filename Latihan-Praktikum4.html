@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Useless Facts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-purple-100 min-h-screen flex items-center justify-center">
+  <div class="text-center p-10 bg-white rounded-3xl shadow-xl w-[450px]">
+    <h1 class="text-4xl font-bold mb-6 flex items-center justify-center gap-2">
+      <span>🤪</span> Random Useless Facts
+    </h1>
+
+    <div id="fact-box" class="text-xl text-gray-700 mb-8">
+      Klik tombol di bawah untuk mendapatkan fakta acak!
+    </div>
+
+    <button id="btn-refresh" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold transition flex items-center gap-2 mx-auto">
+      🔄 Get Another Random Fact
+    </button>
+  </div>
+
+  <script>
+    const facts = [
+      "A group of crows is called a 'murder'.",
+      "Honey never spoils — archaeologists found 3000-year-old honey still edible.",
+      "Bananas are berries, but strawberries aren’t.",
+      "Octopuses have three hearts.",
+      "You can't hum while holding your nose closed.",
+      "Butterflies taste with their feet.",
+      "A day on Venus is longer than a year on Venus."
+    ];
+
+    const factBox = document.getElementById("fact-box");
+    const btn = document.getElementById("btn-refresh");
+
+    btn.addEventListener("click", () => {
+      const randomFact = facts[Math.floor(Math.random() * facts.length)];
+      factBox.textContent = randomFact;
+    });
+  </script>
+</body>
+</html>
